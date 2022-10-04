@@ -3,7 +3,7 @@ package vehiculos;
 public class Automovil extends Vehiculo {
 	
 	private  int puestos;
-	private int puertas=4;
+	protected int puertas=4;
 	private int velocidadMaxima=100;
 	private String traccion="FWD";
 	protected static int cantidadAutomovil;
@@ -29,6 +29,12 @@ public class Automovil extends Vehiculo {
 	
 	
 	
+	public int getPuertas() {
+		return puertas;
+	}
+	public void setPuertas(int puertas) {
+		this.puertas = puertas;
+	}
 	public Automovil(String placa,String nombre,int precio,int peso, Fabricante fab, int puestos ) {
 		super();
 		cantidadAutomovil++;

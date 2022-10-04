@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Fabricante {
 
 	
-	private String nombre; //nombre del fabricante
-	protected Pais pais; // país donde se ubica la fabrica
+	private String nombre; 
+	protected Pais pais; 
 	protected static ArrayList<Fabricante> fabricas = new ArrayList<>();
 	protected int cantidadVehiculosF;
 	public String getNombre() {

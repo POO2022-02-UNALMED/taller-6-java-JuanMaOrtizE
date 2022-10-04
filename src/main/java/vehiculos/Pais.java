@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Pais {
 
-	protected String nombre; // nombre del país
+	protected String nombre; 
 	protected int cantidadVehiculosP;
 	protected static ArrayList<Pais> paises = new ArrayList<>();
 	

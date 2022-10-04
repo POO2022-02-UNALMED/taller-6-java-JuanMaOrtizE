@@ -31,7 +31,7 @@ public class TestConstructores {
    	public void testAutomovil(){
 		
 		Vehiculo ve = new Automovil("AA", "Carro", 100, 20, f, 4);
-		
+										
 		boolean ok = false;
 		if(ve.getPuertas() == 4 && ve.getTraccion().equals("FWD")
 				&& ve.getVelocidadMaxima() ==  100) {

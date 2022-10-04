@@ -1,22 +1,18 @@
-package test;
+package vehiculos;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+public class main {
 
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-
-import vehiculos.Automovil;
-import vehiculos.Camion;
-import vehiculos.Camioneta;
-import vehiculos.Fabricante;
-import vehiculos.Pais;
-import vehiculos.Vehiculo;
-
-@TestMethodOrder(MethodOrderer.Alphanumeric.class)
-public class TestFuncionalidades {
-	
-	static {
+	public static void main(String[] args) {
+		
+		
+//		Pais p = new Pais("Colombia");
+//		Fabricante f = new Fabricante("Renault", p);
+//		Vehiculo ve = new Automovil("AA", "Carro", 100, 20, f, 4);
+//		Camion c1 =  new Camion("SS", "Camion premium", 1000, 100, f, 3);
+//		Camioneta ca1 =  new Camioneta("CC", 5, "Ford", 500, 150, f, true);
+//		Camioneta ca2 =  new Camioneta("CC", 5, "Ford", 500, 150, f, true);
+//		ve.vehiculosPorTipo();
+//		System.out.println(Vehiculo.getCantidadVehiculos());
 		
 		Pais p1 = new Pais("Ecuador");
 		Pais p2 = new Pais("USA");
@@ -26,7 +22,6 @@ public class TestFuncionalidades {
 		Fabricante f2 = new Fabricante("Chevrolet", p1);
 		Fabricante f3 = new Fabricante("Tesla", p2);
 		Fabricante f4 = new Fabricante("Volvo", p3);
-		
 		new Camion("SS", "Camion premium", 1000, 100, f1, 3);
 		new Camion("AA", "Camion", 1000, 100, f1, 3); 
 		new Automovil("NN", "Mac 100", 820, 20, f1, 4);
@@ -41,25 +36,17 @@ public class TestFuncionalidades {
 		
 		new Camioneta("CC", 5, "Ford", 500, 150, f4, true);
 		new Automovil("NN", "Mac 100", 820, 20, f4, 4);
+		
+		System.out.println(p1.cantidadVehiculosP);
+		System.out.println(p2.cantidadVehiculosP);
+		System.out.println(p3.cantidadVehiculosP);
+		
+		
+		System.out.println(Pais.paisMasVendedor().getNombre());
+		System.out.println(Fabricante.fabricaMayorVentas().getNombre());
+		
+		
+
 	}
 
-	@Test
-   	public void testPais(){
-		
-		boolean ok = false;
-		if(Pais.paisMasVendedor().getNombre().equals("Ecuador")) {
-			ok = true;
-		}
-		assertTrue(ok, "Hay un problema en el metodo paisMasVendedor");
-    }
-	
-	@Test
-   	public void testFabricante(){
-		
-		boolean ok = false;
-		if(Fabricante.fabricaMayorVentas().getNombre().equals("Renault")) {
-			ok = true;
-		}
-		assertTrue(ok, "Hay un problema en el metodo fabricaMayorVentas");
-    }
 }
